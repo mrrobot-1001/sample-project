@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manvidia - Leading GPU Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* For animations */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .slide-in {
+      animation: slideIn 1s ease-out;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-green-400">Manvidia</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-green-400">Home</a>
+        <a href="#products" class="hover:text-green-400">Products</a>
+        <a href="#about" class="hover:text-green-400">About Us</a>
+        <a href="#contact" class="hover:text-green-400">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+      <a href="#home" class="block hover:text-green-400">Home</a>
+      <a href="#products" class="block hover:text-green-400">Products</a>
+      <a href="#about" class="block hover:text-green-400">About Us</a>
+      <a href="#contact" class="block hover:text-green-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-500 slide-in">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold text-white mb-6">Welcome to Manvidia</h1>
+      <p class="text-xl mb-8">Powering the Future of Graphics with Cutting-edge GPUs</p>
+      <a href="#products"
+        class="px-6 py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300 ease-in-out">Explore
+        Products</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container mx-auto py-16 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product Card 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">
+        <img src="https://via.placeholder.com/300x200" alt="GPU" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Manvidia GTX Pro</h3>
+        <p class="text-gray-400 mb-4">A powerful GPU for professional gaming and rendering tasks.</p>
+        <a href="#"
+          class="px-4 py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300 ease-in-out">Buy
+          Now</a>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">
+        <img src="https://via.placeholder.com/300x200" alt="GPU" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Manvidia RTX 9000</h3>
+        <p class="text-gray-400 mb-4">Designed for ultimate gaming performance and ray tracing technology.</p>
+        <a href="#"
+          class="px-4 py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300 ease-in-out">Buy
+          Now</a>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">
+        <img src="https://via.placeholder.com/300x200" alt="GPU" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Manvidia Quadro FX</h3>
+        <p class="text-gray-400 mb-4">Best suited for high-end rendering, AI, and design professionals.</p>
+        <a href="#"
+          class="px-4 py-2 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300 ease-in-out">Buy
+          Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="bg-gray-800 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">About Manvidia</h2>
+      <p class="text-gray-400 leading-relaxed max-w-3xl mx-auto">At Manvidia, we are passionate about creating the world's
+        most powerful and reliable GPUs for gamers, designers, and professionals. Our mission is to push the limits of
+        innovation in graphic technology to deliver unparalleled performance and customer satisfaction.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-900 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+      <p class="text-gray-400 mb-8">Have any questions or concerns? Reach out to us!</p>
+      <form class="max-w-lg mx-auto">
+        <input type="text" placeholder="Name" class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white" />
+        <input type="email" placeholder="Email" class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white" />
+        <textarea placeholder="Message" rows="5"
+          class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white"></textarea>
+        <button type="submit"
+          class="px-6 py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition duration-300 ease-in-out">Send
+          Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto text-center text-gray-400">
+      <p>&copy; 2024 Manvidia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+</html>
